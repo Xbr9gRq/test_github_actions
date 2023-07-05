@@ -10,7 +10,7 @@ jobs:
       - name: Obtain the bundle ID
         id: obtain_bundle_id
         run: |
-          bundle_id="hello.world"
+          bundle_id="helloworld"
           echo "Using Bundle ID '$bundle_id'"
           echo "bundle_id=${bundle_id}" >> $GITHUB_STATE
 
