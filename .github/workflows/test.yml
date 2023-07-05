@@ -12,7 +12,7 @@ jobs:
         run: |
           bundle_id="helloworld"
           echo "Using Bundle ID '$bundle_id'"
-          echo "bundle_id=test" >> $GITHUB_STATE
+          echo "bundle_id=green" >> $GITHUB_OUTPUT
 
       - name: Print the bundle ID
         run: |
