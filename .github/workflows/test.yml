@@ -1,0 +1,20 @@
+name: "🤖 Test"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtain the bundle ID
+        id: obtain_bundle_id
+        run: |
+          bundle_id="hello.world"
+          echo "Using Bundle ID '$bundle_id'"
+          echo "bundle_id=${bundle_id}" >> $GITHUB_STATE
+
+      - name: Print the bundle ID
+        run: |
+          echo "Using Bundle ID '${{ steps.obtain_bundle_id.outputs.bundle_id }}'"
+            
